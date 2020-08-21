@@ -1,0 +1,19 @@
+gcc -o client MirrorInitiator.c 
+./client -n localhost -p 9000 -s localhost:9005:/folder1:1,192.168.1.2:9004:/home/user/workspace/SysproProject3/folder2:1,localhost:9006:/folder3:1
+gcc -pthread -o server MirrorServer.c
+./server -p 9000 -m /home/user/workspace/SysproProject3 -w 10
+gcc -o cserver ContentServer.c 
+./cserver -p 9003 -d /home/user/workspace/SysproProject3
+./cserver -p 9004 -d /home/user/workspace/SysproProject3
+
+
+
+
+linux sxolhs
+
+./server -p 9000 -m /home/users1/sdi1400266/Documents/syspro3 -w 12
+./client -n localhost -p 9000 -s localhost:9003:/home/users1/sdi1400266/Documents/syspro3/folder1:1,linux28.di.uoa.gr:9004:/home/users1/sdi1400266/Documents/syspro3/folder2:1,linux28.di.uoa.gr:9005:/folder2:1
+./cserver -p 9006 -d /home/users1/sdi1400266/Documents/syspro3
+
+./cserver -p 9004 -d /home/users1/sdi1400266/Documents/syspro3
+
